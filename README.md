@@ -1,72 +1,92 @@
 <p align="center">
-  <img src="screenshots/tic3.jpeg" alt="Tic Tac Toe Banner">
+  <img src="screenshots/tic3.jpeg" alt="Tic Tac Toe Banner" width="700">
 </p>
 
-# Tic Tac Toe
+<h1 align="center">Tic Tac Toe</h1>
+
+<p align="center">
+  A simple and interactive Tic Tac Toe game built with Flutter.
+</p>
+
+<p align="center">
+  Play against a friend or challenge an AI opponent.
+</p>
+
+--------------------------
+
+## 🎮 About the Project
 
 Tic Tac Toe is a simple and interactive Flutter game that allows players to enjoy the classic Tic Tac Toe experience either against a friend or an AI opponent.
 
-The game provides a simple flow where players can choose their preferred game mode, select their playing side (X or O), and then start the game.
+The game provides a simple flow where players can:
 
-When a player wins, the winning pattern is highlighted using a custom-painted line, accompanied by a simple celebration effect using the Confetti package.
+* Choose their preferred game mode.
+* Select their playing side (X or O).
+* Start playing immediately.
+* Get visual feedback when a winning pattern is detected.
 
-# Features
+When a player wins, the winning pattern is highlighted using a custom-painted line, accompanied by a celebration effect using the **Confetti** package.
 
-- **Game Modes**: Players can choose between playing against a friend or playing against the AI.
-- **Player Side Selection**: Players can choose whether to play as X or O.
-- **Interactive Gameplay**: Provides a simple and responsive Tic Tac Toe game experience.
-- **Winning Pattern Detection**: Detects the winning combination and highlights it automatically.
-- **Custom Winning Line**: Uses Flutter's `CustomPainter` to draw a line over the winning pattern.
-- **Win Celebration**: Displays a simple celebration effect using the `Confetti` package when a player wins.
-- **Reusable Widgets**: UI components are organized into reusable widgets for better code organization.
-- **Responsive UI**: Designed to provide a clean gaming experience across different screen sizes.
+---------------------------
 
---------------------------------------------------
+## ✨ Features
 
-# Game Flow
+* **Game Modes** — Play against a friend or an AI opponent.
+* **Player Side Selection** — Choose to play as X or O.
+* **Interactive Gameplay** — Simple and responsive game experience.
+* **Winning Pattern Detection** — Automatically detects winning combinations.
+* **Custom Winning Line** — Uses Flutter's `CustomPainter` to draw a line over the winning pattern.
+* **Win Celebration** — Displays a celebration animation using the `Confetti` package.
+* **Draw Detection** — Detects when the game ends without a winner.
+* **Reusable Widgets** — UI components are organized into reusable widgets.
+* **Responsive UI** — Designed to work across different screen sizes.
 
-The application follows a simple three-step flow:
+------------------------------------
+
+## 🎯 Game Flow
 
 ### 1. Select Play Mode
 
 The player first chooses how they want to play:
 
-- **Play with a Friend**
-- **Play with AI**
+* **Play with a Friend**
+* **Play with AI**
 
 ### 2. Select Your Side
 
-The player then chooses which side they want to play:
+The player chooses which side they want to play:
 
-- **X**
-- **O**
+* **X**
+* **O**
 
 ### 3. Start the Game
 
-The game board is displayed and players can start playing.
+The game board is displayed and the player can start playing.
 
 When a winning pattern is detected:
 
-- The winning combination is identified.
-- A line is drawn over the winning pattern using `CustomPainter`.
-- A celebration animation is displayed using `Confetti`.
+1. The winning combination is identified.
+2. A line is drawn over the winning pattern using `CustomPainter`.
+3. A celebration animation is displayed using `Confetti`.
 
---------------------------------------------------
+If all cells are filled without a winning combination, the game displays a **Draw** result.
 
-# System Components (Tech Stack)
+-------------------------------------
 
-- **Frontend:** Flutter (Dart)
-- **UI:** Flutter Widgets
-- **Game Logic:** Dart
-- **Custom Graphics:** Flutter `CustomPainter`
-- **State & Game Handling:** Local game logic
-- **Animation:** Confetti package
+## 🛠️ Tech Stack
 
---------------------------------------------------
+| Technology           | Usage                                    |
+| -------------------- | ---------------------------------------- |
+| **Flutter**          | Application development                  |
+| **Dart**             | Game logic and application code          |
+| **Flutter Widgets**  | User interface                           |
+| **CustomPainter**    | Drawing the winning line                 |
+| **Confetti**         | Win celebration animation                |
+| **Local Game Logic** | Game state and winning pattern detection |
 
-# App Structure
+---
 
-The project is organized into separate folders for core resources, game logic, and UI views.
+## 📁 Project Structure
 
 ```text
 lib/
@@ -84,92 +104,167 @@ lib/
 │   │
 │   ├── game_home.dart
 │   ├── select_play_mode.dart
-│   ├── select_your_side.dart
-│ 
+│   └── select_your_side.dart
 │
 └── main.dart
+```
 
-Core:
-The core folder contains shared resources used throughout the application:
+### Core
 
-app_colors.dart — Contains the application's color definitions.
-app_images.dart — Contains image-related constants and resources.
-text_styles.dart — Contains reusable text styles.
+The `core` folder contains shared resources used throughout the application:
 
-Logic:
+* `app_colors.dart` — Contains the application's color definitions.
+* `app_images.dart` — Contains image-related constants and resources.
+* `text_styles.dart` — Contains reusable text styles.
 
-The logic folder contains the application's game logic:
+### Logic
 
-game_logic.dart — Handles the main Tic Tac Toe game logic and winning patterns.
-Views
+The `logic` folder contains the application's game logic:
 
-The views folder contains the application's screens and UI:
+* `game_logic.dart` — Handles the main Tic Tac Toe game logic, game state, and winning patterns.
 
-game_home.dart — Main game/home screen.
-select_play_mode.dart — Allows the player to choose between playing with a friend or AI.
-select_your_side.dart — Allows the player to select X or O.
-widgets/ — Contains reusable UI components used throughout the game.
+### Views
 
-main.dart — The entry point of the Flutter application.
---------------------------------------------------------
+The `views` folder contains the application's screens and reusable UI components:
 
-# Screenshots
+* `game_home.dart` — Main game screen.
+* `select_play_mode.dart` — Allows the player to choose between playing with a friend or AI.
+* `select_your_side.dart` — Allows the player to select X or O.
+* `widgets/` — Contains reusable UI components used throughout the game.
 
-| Select Play mode Page                   | Choose your side page                | Home Page & winner case             |
-|-----------------------------------------|--------------------------------------|-------------------------------------|
-| ![mode](screenshots/tic1.jpeg)          | ![side](screenshots/tic2.jpeg)       | ![winning](screenshots/tic3.jpeg)   |
+### Main
 
-| Draw result case                        | 
-| ----------------------------------      |
-| ![draw](screenshots/draw_result.jpeg)   | 
+* `main.dart` — The entry point of the Flutter application.
 
---------------------------------------------
+---------------------------
 
-# Demo Video
+## 📸 Screenshots
 
-🎥 **Application Demo**
+### Select Play Mode
 
-[Watch the Tic Tac Toe Demo](https://drive.google.com/file/d/16Rwg74piT8Pbw_F5LC2kq_Ubw0aGmqZK/view?usp=drive_link)
+<p align="center">
+  <img src="screenshots/tic1.jpeg" alt="Select Play Mode" width="250">
+</p>
 
---------------------------------------------------
+### Choose Your Side
 
-# Packages Used
+<p align="center">
+  <img src="screenshots/tic2.jpeg" alt="Choose Your Side" width="250">
+</p>
 
-This project uses the following Flutter package:
+### Game & Winning Result
 
-🎉 UI & Animation
-confetti - Used to display a simple celebration animation when a player wins.
-🎨 Flutter Features
-CustomPainter - Used to draw the winning line over the detected winning pattern.
-Flutter Widgets - Used to build the game's user interface and interactions
-------------------------------------------------------
+<p align="center">
+  <img src="screenshots/tic3.jpeg" alt="Tic Tac Toe Winning Result" width="250">
+</p>
 
-# Getting Started
+### Draw Result
 
-Prerequisites:
+<p align="center">
+  <img src="screenshots/draw_result.jpeg" alt="Tic Tac Toe Draw Result" width="250">
+</p>
+
+----------------------------
+
+## 🎥 Demo Video
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/16Rwg74piT8Pbw_F5LC2kq_Ubw0aGmqZK/view?usp=drive_link">
+    Watch the Tic Tac Toe Demo
+  </a>
+</p>
+
+------------------------------
+
+## 📦 Packages Used
+
+### 🎉 UI & Animation
+
+* **Confetti** — Used to display a celebration animation when a player wins.
+
+### 🎨 Flutter Features
+
+* **CustomPainter** — Used to draw the winning line over the detected winning pattern.
+* **Flutter Widgets** — Used to build the game's user interface and interactions.
+
+---------------------------------
+
+## 🚀 Getting Started
+
+### Prerequisites
+
 Before running the project, make sure you have:
 
-Flutter SDK installed.
-Dart SDK installed.
-Android Studio or Visual Studio Code.
-An Android emulator, iOS simulator, or a physical device.
+* Flutter SDK installed.
+* Dart SDK installed.
+* Android Studio or Visual Studio Code.
+* An Android emulator, iOS simulator, or a physical device.
 
-## How to Run the App
+### Installation
 
-1. Clone the repository.
-2. Run `flutter pub get` to install dependencies.
-3. Run `flutter run` to start the app.
-------------------------------------------------
-# How to Play
+1. Clone the repository:
 
-Open the application.
-Select the preferred game mode:
-Play with a Friend
-Play with AI
-Select your side:
-X
-O
-Start playing Tic Tac Toe.
-Complete a winning pattern to win the game.
-The winning pattern will be highlighted with a custom-drawn line.
-A celebration animation will appear when a player wins.
+```bash
+git clone <your-repository-url>
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd <project-folder>
+```
+
+3. Install the dependencies:
+
+```bash
+flutter pub get
+```
+
+4. Run the application:
+
+```bash
+flutter run
+```
+
+---
+
+## 🎮 How to Play
+
+1. Open the application.
+2. Select the preferred game mode:
+
+   * **Play with a Friend**
+   * **Play with AI**
+3. Select your side:
+
+   * **X**
+   * **O**
+4. Start playing Tic Tac Toe.
+5. Complete a winning pattern to win the game.
+6. The winning pattern will be highlighted with a custom-drawn line.
+7. A celebration animation will appear when a player wins.
+8. If all cells are filled without a winner, the game ends in a draw.
+
+----------------------
+
+## 💡 Highlights
+
+This project demonstrates:
+
+* Flutter UI development.
+* Game logic implementation.
+* Winning pattern detection.
+* Custom drawing using `CustomPainter`.
+* Reusable widget development.
+* Basic animation and visual feedback.
+* Responsive UI design.
+
+---------------------------
+
+## 👩‍💻 Author
+
+**Noura Tarek**
+
+Flutter Developer | Software Engineer
+
+---
