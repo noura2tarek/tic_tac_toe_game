@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="screenshots\tic3.jpeg" alt="Tic Tac Toe Banner">
+  <img src="screenshots/tic3.jpeg" alt="Tic Tac Toe Banner">
 </p>
 
 # Tic Tac Toe
@@ -113,17 +113,18 @@ widgets/ — Contains reusable UI components used throughout the game.
 main.dart — The entry point of the Flutter application.
 --------------------------------------------------------
 
-## Screenshots
+# Screenshots
 
 | Select Play mode Page                   | Choose your side page                | Home Page & winner case             |
 |-----------------------------------------|--------------------------------------|-------------------------------------|
-| ![mode](screenshots\tic1.jpeg)          | ![side](screenshots\tic2.jpeg)       | ![winning](screenshots\tic3.jpeg)   |
+| ![mode](screenshots/tic1.jpeg)          | ![side](screenshots/tic2.jpeg)       | ![winning](screenshots/tic3.jpeg)   |
 
 | Draw result case                        | 
 | ----------------------------------      |
-| ![draw](screenshots\draw_result.jpeg)   | 
+| ![draw](screenshots/draw_result.jpeg)   | 
 
 --------------------------------------------
+
 # Demo Video
 
 🎥 **Application Demo**
@@ -131,6 +132,7 @@ main.dart — The entry point of the Flutter application.
 [Watch the Tic Tac Toe Demo](https://drive.google.com/file/d/16Rwg74piT8Pbw_F5LC2kq_Ubw0aGmqZK/view?usp=drive_link)
 
 --------------------------------------------------
+
 # Packages Used
 
 This project uses the following Flutter package:
@@ -141,6 +143,7 @@ confetti - Used to display a simple celebration animation when a player wins.
 CustomPainter - Used to draw the winning line over the detected winning pattern.
 Flutter Widgets - Used to build the game's user interface and interactions
 ------------------------------------------------------
+
 # Getting Started
 
 Prerequisites:
@@ -157,8 +160,8 @@ An Android emulator, iOS simulator, or a physical device.
 2. Run `flutter pub get` to install dependencies.
 3. Run `flutter run` to start the app.
 ------------------------------------------------
-
 # How to Play
+
 Open the application.
 Select the preferred game mode:
 Play with a Friend
